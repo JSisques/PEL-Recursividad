@@ -4,11 +4,11 @@
 using namespace std;
 
 struct Node {
-    int valor;
+    char valor;
     struct Node* izq;
     struct Node* dcha;
 
-    Node(int v) {
+    Node(char v) {
         valor = v;
         izq = NULL;
         dcha = NULL;
@@ -25,14 +25,14 @@ void pintarArbol(Node* nodo){
 
 main(int argc, char const* argv[]) {
     
-    struct Node* padre = new Node(1);
-    padre->izq = new Node(7);
-    padre->dcha = new Node(9);
+    struct Node* padre = new Node('A');
+    padre->izq = new Node('B');
+    padre->dcha = new Node('C');
 
-    padre->izq->izq = new Node(20);
-    padre->izq->dcha = new Node(80);
+    padre->izq->izq = new Node('D');
+    padre->izq->dcha = new Node('E');
 
-    padre->dcha->dcha = new Node(200);
+    padre->dcha->dcha = new Node('F');
 
     pintarArbol(padre);
 
